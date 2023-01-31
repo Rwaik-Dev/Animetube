@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Animetube",
+    "slug": "Animetube",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
