@@ -10,7 +10,9 @@ interface IContainerProps {
 export const Container = styled.Pressable<IContainerProps>`
     width: 100%;
     height: 60px;
-    background-color: ${props => props.backgroundColor} ; 
+    background-color: #000 ;
+    border: 1.5px solid ${props => props.backgroundColor};
+    margin-bottom: 4px ;
 `;
 
 export const TitleEpisode = styled.Text`

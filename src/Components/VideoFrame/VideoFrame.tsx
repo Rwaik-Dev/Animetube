@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Video } from 'expo-av';
 
-import { Dimensions } from "react-native"
+import { Dimensions, ActivityIndicator } from "react-native"
 
-import { Container, VideoContainer } from './styles'
 import { ResizeMode } from 'expo-av/build/Video.types';
 import * as ScreenOrientation from "expo-screen-orientation"
-import VideoContext from '../../Context/Context';
+
+import { Container, VideoContainer } from './styles'
+import { VideoInfo } from "../../Context/Context"
 
 const VideoFrame: React.FC = () => {
+
+    const { currentVideo, videoSrc } = useContext(VideoInfo)
 
     const videoRef = React.useRef(null)
     const [status, setStatus] = React.useState({})
@@ -20,7 +23,6 @@ const VideoFrame: React.FC = () => {
             ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT)
         }
     }
-
     return (
         <Container>
             <VideoContainer>
@@ -28,16 +30,17 @@ const VideoFrame: React.FC = () => {
                     ref={videoRef}
                     useNativeControls
                     resizeMode={ResizeMode.CONTAIN}
-                    isLooping
                     onFullscreenUpdate={setFullScreen}
                     onPlaybackStatusUpdate={status => setStatus(() => status)}
-                    style={{ width: '100%', height: '100%' }}
+                    style={{
+                        width: '100%',
+                        height: '100%'
+                    }}
                     source={{
-                        uri: "./",
+                        uri: currentVideo,
                     }}
                 />
             </VideoContainer>
-
         </Container>
     )
 

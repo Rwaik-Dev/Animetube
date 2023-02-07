@@ -3,7 +3,7 @@ import { Category, Container, EpNumber, TitleEpisode } from './styles';
 import { List } from '../../Services/Data/animeList';
 
 interface IVideoItemProps extends List {
-    backgroundColor: string;
+    backgroundColor?: string;
     onPress: () => void;
 }
 
@@ -12,7 +12,7 @@ const VideoItem: React.FC<IVideoItemProps> = ({ title, episodio, categoria, back
         <Container backgroundColor={backgroundColor} onPress={onPress}>
             <TitleEpisode>{title}</TitleEpisode>
             <EpNumber>Episodio: {episodio}</EpNumber>
-            <Category>{categoria}</Category>
+            <Category>{categoria}</Category> 
         </Container>
     )
 }
