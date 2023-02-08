@@ -1,4 +1,5 @@
 import React from 'react'
+import FlagEpisode from '../../Components/FlagEpisode/FlagEpisode'
 
 import ListVideos from '../../Components/ListVideos/ListVideos'
 import VideoFrame from '../../Components/VideoFrame/VideoFrame'
@@ -12,6 +13,7 @@ const VideoPlayer = () => {
       <VideoInfoProvider>
         <VideoFrame />
         <ListVideos />
+        <FlagEpisode/>
       </VideoInfoProvider>
     </Container>
   )

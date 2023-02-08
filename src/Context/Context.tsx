@@ -1,29 +1,46 @@
 import React, { createContext } from 'react';
 interface IVideoInfoProps {
-    videoSrc: string;
     currentVideo: string;
+    infoVideo: IInfoVideoProps;
     getVideoSrc: (currentVideoSrc: string) => void;
+    getVideoInformations: (src: string, episode: number) => void
 }
 
+interface IInfoVideoProps {
+    source: string,
+    episodio: number;
+}
 
 export const VideoInfo = createContext<IVideoInfoProps>({
-    videoSrc: "",
     currentVideo: "",
-    getVideoSrc() { }
+    infoVideo: {} as IInfoVideoProps,
+    getVideoSrc() { },
+    getVideoInformations() { }
 })
 
 
 function VideoInfoProvider({ children }) {
+    const [infoVideo, setInfoVideo] = React.useState<IInfoVideoProps>({ source: "", episodio: 0 })
+
     const [currentVideo, setCurrentVideo] = React.useState("")
+
     function getVideoSrc(currentVideoSrc: string) {
         setCurrentVideo(currentVideoSrc)
     }
 
+    function getVideoInformations(src: string, episode: number) {
+        setInfoVideo({
+            source: src,
+            episodio: episode
+        })
+    }
     return (
-        <VideoInfo.Provider value={{ 
-            videoSrc: "https://lightspeedst.net/s2/mp4/dragon-ball-z-dublado/sd/1.mp4",
+        <VideoInfo.Provider value={{
+            currentVideo,
+            infoVideo,
             getVideoSrc,
-            currentVideo }}>
+            getVideoInformations
+        }}>
             {children}
         </VideoInfo.Provider>
     )

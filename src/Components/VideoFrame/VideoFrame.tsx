@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Video } from 'expo-av';
 
-import { Dimensions, ActivityIndicator } from "react-native"
+import { Dimensions} from "react-native"
 
 import { ResizeMode } from 'expo-av/build/Video.types';
 import * as ScreenOrientation from "expo-screen-orientation"
@@ -11,7 +11,7 @@ import { VideoInfo } from "../../Context/Context"
 
 const VideoFrame: React.FC = () => {
 
-    const { currentVideo, videoSrc } = useContext(VideoInfo)
+    const { infoVideo } = useContext(VideoInfo)
 
     const videoRef = React.useRef(null)
     const [status, setStatus] = React.useState({})
@@ -37,7 +37,7 @@ const VideoFrame: React.FC = () => {
                         height: '100%'
                     }}
                     source={{
-                        uri: currentVideo,
+                        uri: infoVideo.source
                     }}
                 />
             </VideoContainer>

@@ -11,25 +11,21 @@ import { VideoInfo } from '../../Context/Context'
 
 const ListVideos: React.FC = () => {
 
+    const {getVideoInformations, infoVideo} = useContext(VideoInfo)
 
-    const {getVideoSrc} = useContext(VideoInfo)
-
-    const handleChangeEpisodes = (srcVideo) => {
-        getVideoSrc(srcVideo)
+    const handleChangeEpisodes = (srcVideo, episodio) => {
+        getVideoInformations(srcVideo, episodio)
     }
-    
-    const [currentEpisode, setCurrentEpisode] = React.useState(1)
 
     const renderItem = ({ item }: ListRenderItemInfo<List>) => {
         return (
             <VideoItem {...item}
                 backgroundColor={
-                    item.episodio === currentEpisode
+                    item.episodio === infoVideo.episodio
                         ? MyTheme.colors.card
                         : MyTheme.colors.background}
                 onPress={() => {
-                    setCurrentEpisode(item.episodio);
-                    handleChangeEpisodes(item.source);
+                    handleChangeEpisodes(item.source , item.episodio);
                 }} />
         )
     }
