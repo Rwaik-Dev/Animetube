@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator()
 const Routes = () => {
   return (
     <NavigationContainer theme={MyTheme} >
-        <Stack.Navigator initialRouteName='VideoPlayer'>
+        <Stack.Navigator initialRouteName='HomeScreen'>
             <Stack.Screen 
             name="HomeScreen"
             component={HomeScreen}

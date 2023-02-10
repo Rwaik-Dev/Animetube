@@ -5,8 +5,8 @@ export const Container = styled.ScrollView.attrs({
     horizontal: true,
     showsHorizontalScrollIndicator: false,
     removeClippedSubviews: true,
-    contentContainerStyle:{
-        padding: 10 ,
+    contentContainerStyle: {
+        padding: 10,
         overflow: 'hidden',
     }
 })`
@@ -16,4 +16,5 @@ export const Container = styled.ScrollView.attrs({
     background-color: ${MyTheme.colors.background};
     border-radius: 10px;
     border: 2px solid ${MyTheme.colors.card};
+    margin-bottom:10px
 `;

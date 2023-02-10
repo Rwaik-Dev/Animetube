@@ -6,8 +6,12 @@ import ContentNewestAnimes from '../../Components/ContentNewestAnimes/ContentNew
 import NewAnime from '../../Components/NewAnime/NewAnime'
 
 import { Container, Scroller, TitleViewContainer, Content } from './Styles'
+import { VideoInfo } from '../../Context/Context' 
 
 const HomeScreen: React.FC = ({ navigation }) => {
+
+  const {getVideoInformations} = React.useContext(VideoInfo)
+
   return (
     <Container>
       <Scroller>
@@ -22,17 +26,22 @@ const HomeScreen: React.FC = ({ navigation }) => {
             title='Dragon Ball Z'
             image='https://meups.com.br/wp-content/uploads/2021/11/Dragon-Ball-Breakers-900x503.jpg'
             rating={5}
-            onPress={() => navigation.navigate('VideoPlayer')}
+            onPress={() => {
+              navigation.navigate('VideoPlayer')
+              return getVideoInformations("",0,1 )
+            }}
           />
           <AnimeCard
             title='Jujutsu Kaisen'
             image='https://viciados.net/wp-content/uploads/2022/01/Jujutsu-Kaisen-2-temporada.webp'
             rating={5}
-            onPress={() => { }}
+            onPress={() => navigation.navigate('VideoPlayer', {
+              animeId: 2
+            })}
           />
           <AnimeCard
-            title='Nanatsu no Taizai'
-            image='https://www.planocritico.com/wp-content/uploads/2022/06/The-Seven-Deadly-Sins-Grand-Cross-nerds-capa.jpg'
+            title='Cyberpunk: Edgerunners'
+            image='https://techraptor.net/sites/default/files/styles/image_header/public/2022-11/Cyberpunk%20Edgerunners%20Mission%20Kit%20Announcement%20Image.jpg?itok=63DIVgUb'
             rating={3}
             onPress={() => { }}
           />
@@ -67,8 +76,8 @@ const HomeScreen: React.FC = ({ navigation }) => {
             onPress={() => { }}
           />
           <AnimeCard
-            title='Bleach'
-            image='https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/7C8402D90848B02D1587A84486741DBCD9EF510B22331B798E9D325AC250EB7A/scale?width=1200&aspectRatio=1.78&format=jpeg'
+            title='Spy X Family'
+            image='https://cloudfront-us-east-1.images.arcpublishing.com/infobae/2SK4PY4FHBHLDCJ24HED5EJF7U.jpg'
             rating={4}
             onPress={() => { }}
           />
@@ -90,8 +99,8 @@ const HomeScreen: React.FC = ({ navigation }) => {
             onPress={() => { }}
           />
           <AnimeCard
-            title='Magi'
-            image='https://static.wikia.nocookie.net/infinitas-guerras/images/1/13/Magi_2.jpg/revision/latest/scale-to-width-down/400?cb=20170823183920&path-prefix=pt-br'
+            title='Tokyo Ghoul'
+            image='https://images-na.ssl-images-amazon.com/images/S/pv-target-images/7e9bea6bffee425ddbe014980d6f0bd803bea68a13840a648514a840cc8db104._RI_V_TTW_.jpg'
             rating={1}
             onPress={() => { }}
           />
@@ -120,7 +129,7 @@ const HomeScreen: React.FC = ({ navigation }) => {
             onPress={() => { }}
           />
           <AnimeCard
-            title='Digimon '
+            title='Digimon Adventure'
             image='https://muramasa.com.br/wp-content/uploads/2022/09/digimon-adventure.webp'
             rating={0}
             onPress={() => { }}
@@ -144,70 +153,12 @@ const HomeScreen: React.FC = ({ navigation }) => {
             onPress={() => (console.log('Press 2'))}
           />
           <NewAnime
-            title='Kemono Friends'
+            title='Demon Slayer'
             description='Kemono Friends é um anime de aventura e comédia em que um grupo de amigos, conhecidos como os Kemono Friends, embarcam em uma jornada divertida para descobrir o segredo do parque de animais onde vivem. Durante sua viagem, eles encontram várias criaturas, amigos e inimigos, enquanto desvendam segredos que farão com que eles façam amizades que durarão para sempre.'
-            backgroundImageSource='https://tm.ibxk.com.br/2022/09/19/19092554443034.jpg?ims=1200x675'
+            backgroundImageSource='https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/d48d4a62b0ac6381c87bd040b69b0a89.jpe'
             onPress={() => (console.log('Press 3'))}
           />
         </ContentNewestAnimes>
-
-        <TitleViewContainer>Outros animes</TitleViewContainer>
-        <Content>
-          <AnimeCard
-            title='Dragon Ball Z'
-            image='https://meups.com.br/wp-content/uploads/2021/11/Dragon-Ball-Breakers-900x503.jpg'
-            rating={5}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='Jujutsu Kaisen'
-            image='https://viciados.net/wp-content/uploads/2022/01/Jujutsu-Kaisen-2-temporada.webp'
-            rating={5}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='Nanatsu no Taizai'
-            image='https://www.planocritico.com/wp-content/uploads/2022/06/The-Seven-Deadly-Sins-Grand-Cross-nerds-capa.jpg'
-            rating={3}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='Naruto'
-            image='https://akamai.sscdn.co/uploadfile/letras/playlists/c/8/d/2/c8d2c68c37e14169b08f2fe288bcda53.jpg'
-            rating={5}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='One Piece'
-            image='https://img.olhardigital.com.br/wp-content/uploads/2021/09/one-piece-1920x1080.jpg'
-            rating={4}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='Code Geass'
-            image='https://www.jornalismo.ufv.br/cinecom/wp-content/uploads/2020/04/7eaf15dea3e549bc95260ce8a455eea9.jpg'
-            rating={3}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='Attack on Titan'
-            image='https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpe'
-            rating={4}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='Fullmetal Alchemist'
-            image='https://criticalhits.com.br/wp-content/uploads/2021/09/fullmetal-alchemist-ou-brotherhood.jpg'
-            rating={3}
-            onPress={() => { }}
-          />
-          <AnimeCard
-            title='Bleach'
-            image='https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/7C8402D90848B02D1587A84486741DBCD9EF510B22331B798E9D325AC250EB7A/scale?width=1200&aspectRatio=1.78&format=jpeg'
-            rating={4}
-            onPress={() => { }}
-          />
-        </Content>
       </Scroller>
     </Container>
   )

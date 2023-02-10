@@ -1,45 +1,46 @@
 import React, { createContext } from 'react';
 interface IVideoInfoProps {
-    currentVideo: string;
     infoVideo: IInfoVideoProps;
-    getVideoSrc: (currentVideoSrc: string) => void;
-    getVideoInformations: (src: string, episode: number) => void
+    episodeId: number;
+    getVideoInformations: (src: string, episode: number, idAnime: number) => void;
+    getEpisodeId: (episode: number) => void;
 }
 
 interface IInfoVideoProps {
-    source: string,
-    episodio: number;
+    source?: string,
+    episodio?: number,
+    idAnime?: number,
 }
 
 export const VideoInfo = createContext<IVideoInfoProps>({
-    currentVideo: "",
     infoVideo: {} as IInfoVideoProps,
-    getVideoSrc() { },
-    getVideoInformations() { }
+    episodeId: undefined,
+    getVideoInformations() { },
+    getEpisodeId() { },
 })
 
 
 function VideoInfoProvider({ children }) {
-    const [infoVideo, setInfoVideo] = React.useState<IInfoVideoProps>({ source: "", episodio: 0 })
+    const [infoVideo, setInfoVideo] = React.useState<IInfoVideoProps>({ source: "", episodio: 0, idAnime: 0 })
+    const [episodeId, setEpisodeId] = React.useState<number>()
 
-    const [currentVideo, setCurrentVideo] = React.useState("")
-
-    function getVideoSrc(currentVideoSrc: string) {
-        setCurrentVideo(currentVideoSrc)
+    function getEpisodeId() {
+        return console.log("Id Episodio:")
     }
 
-    function getVideoInformations(src: string, episode: number) {
+    function getVideoInformations(src: string, episode: number, idAnime: number) {
         setInfoVideo({
             source: src,
-            episodio: episode
+            episodio: episode,
+            idAnime: idAnime,
         })
     }
     return (
         <VideoInfo.Provider value={{
-            currentVideo,
             infoVideo,
-            getVideoSrc,
-            getVideoInformations
+            episodeId,
+            getVideoInformations,
+            getEpisodeId
         }}>
             {children}
         </VideoInfo.Provider>
