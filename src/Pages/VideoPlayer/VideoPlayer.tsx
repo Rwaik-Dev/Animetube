@@ -7,12 +7,16 @@ import VideoInfoProvider from '../../Context/Context'
 
 import { Container } from './Styles'
 
-const VideoPlayer = () => {
+const VideoPlayer = ({route}) => {
+  
+  const {animeId} = route.params
+
+  console.log(animeId)
   return (
     <Container>
       <VideoInfoProvider>
         <VideoFrame />
-        <ListVideos />
+        <ListVideos animeId={animeId}/>
         <FlagEpisode/>
       </VideoInfoProvider>
     </Container>

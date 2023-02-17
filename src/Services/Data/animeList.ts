@@ -10411,6 +10411,238 @@ export const chainsawManList: List[] = [
   },
 ];
 
-export const demonSlayerList:List[] = [
-
-]
+export const demonSlayerList: List[] = [
+  {
+    id: "0",
+    idAnime: 19,
+    episodio: 0,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/0.mp4",
+  },
+  {
+    id: "1",
+    idAnime: 19,
+    episodio: 1,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/1.mp4",
+  },
+  {
+    id: "2",
+    idAnime: 19,
+    episodio: 2,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/2.mp4",
+  },
+  {
+    id: "3",
+    idAnime: 19,
+    episodio: 3,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/3.mp4",
+  },
+  {
+    id: "4",
+    idAnime: 19,
+    episodio: 4,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/4.mp4",
+  },
+  {
+    id: "5",
+    idAnime: 19,
+    episodio: 5,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/5.mp4",
+  },
+  {
+    id: "6",
+    idAnime: 19,
+    episodio: 6,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/6.mp4",
+  },
+  {
+    id: "7",
+    idAnime: 19,
+    episodio: 7,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/7.mp4",
+  },
+  {
+    id: "8",
+    idAnime: 19,
+    episodio: 8,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/8.mp4",
+  },
+  {
+    id: "9",
+    idAnime: 19,
+    episodio: 9,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source: "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/9.mp4",
+  },
+  {
+    id: "10",
+    idAnime: 19,
+    episodio: 10,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/10.mp4",
+  },
+  {
+    id: "11",
+    idAnime: 19,
+    episodio: 11,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/11.mp4",
+  },
+  {
+    id: "12",
+    idAnime: 19,
+    episodio: 12,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/12.mp4",
+  },
+  {
+    id: "13",
+    idAnime: 19,
+    episodio: 13,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/13.mp4",
+  },
+  {
+    id: "14",
+    idAnime: 19,
+    episodio: 14,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/14.mp4",
+  },
+  {
+    id: "15",
+    idAnime: 19,
+    episodio: 15,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/15.mp4",
+  },
+  {
+    id: "16",
+    idAnime: 19,
+    episodio: 16,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/16.mp4",
+  },
+  {
+    id: "17",
+    idAnime: 19,
+    episodio: 17,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/17.mp4",
+  },
+  {
+    id: "18",
+    idAnime: 19,
+    episodio: 18,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/18.mp4",
+  },
+  {
+    id: "19",
+    idAnime: 19,
+    episodio: 19,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/19.mp4",
+  },
+  {
+    id: "20",
+    idAnime: 19,
+    episodio: 20,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/20.mp4",
+  },
+  {
+    id: "21",
+    idAnime: 19,
+    episodio: 21,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/21.mp4",
+  },
+  {
+    id: "22",
+    idAnime: 19,
+    episodio: 22,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/22.mp4",
+  },
+  {
+    id: "23",
+    idAnime: 19,
+    episodio: 23,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/23.mp4",
+  },
+  {
+    id: "24",
+    idAnime: 19,
+    episodio: 24,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/24.mp4",
+  },
+  {
+    id: "25",
+    idAnime: 19,
+    episodio: 25,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/25.mp4",
+  },
+  {
+    id: "26",
+    idAnime: 19,
+    episodio: 26,
+    categoria: "Aventura",
+    title: "Demon Slayer",
+    source:
+      "https://lightspeedst.net/s2/mp4/kimetsu-no-yaiba-dublado/sd/26.mp4",
+  },
+];
